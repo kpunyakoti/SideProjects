@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id = "brandname">
+			<h1><font color='#99CA3B'>HelloFresh: </font>Recipe Score Prediction</h1>
+		</div>
+		</div>
+	</header>
+
+	<div class="ml-container">
+	
+	<form action="{{url_for('predict')}}" method="POST">
+
+	<p>Ingredients Total Weight:</p>
+	<input type="number" id="weight" name="weight" min="1" placeholder = "enter positive number" required>
+	<br/>
+	<p>Ingredients Count:</p>
+	<input type="number" id="count" name="count" min="1" placeholder = "enter positive integer" required>
+	<br>
+	<br/>
+	<input type="submit" class="btn-info" value="Predict">
+
+</form>
+</div>
+</body>
+</html>
